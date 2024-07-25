@@ -2,6 +2,8 @@ package com.mavene.ems.service;
 
 import com.mavene.ems.dto.EmployeeDto;
 
+import java.util.List;
+
 public interface EmployeeService {
 
     //Build add Employee REST API
@@ -12,5 +14,11 @@ public interface EmployeeService {
 
 
     //Build get all employees REST API
-//    Iterable<EmployeeDto> getAllEmployees();
+    List<EmployeeDto> getAllEmployees();
+
+    //Build update employee REST API
+    EmployeeDto updateEmployee(Long employeeId, EmployeeDto updatedEmployee);
+
+    //Build delete employee REST API
+    void deleteEmployee(Long employeeId);
 }
